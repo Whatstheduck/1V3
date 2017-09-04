@@ -46,3 +46,14 @@ class Card:
         if mode == 'FULL':
             return POINTS_FULL[self.point] if self.suit is None\
                 else 'the ' + POINTS_FULL[self.point] + ' of ' + SUITS_FULL[self.suit]
+
+    def __eq__(self, other):
+        """ Judge if two cards are equal """
+        if not isinstance(other, Card):
+        	raise Exception('Must compare with Card!')
+
+        return True if self.suit == other.suit and self.point == other.point else False
+
+    def __ne__(self, other):
+        """ Judge if two cards are not equal """
+        return False if self == other else True
