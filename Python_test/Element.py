@@ -46,5 +46,3 @@ class Card:
 		if mode == 'FULL':
 			return POINTS_FULL[self.point] if self.suit is None\
 				else 'the ' + POINTS_FULL[self.point] + ' of ' + SUITS_FULL[self.suit]
-
-print(Card(3, 'c'))
